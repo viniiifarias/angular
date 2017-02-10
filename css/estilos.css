@@ -1,0 +1,15 @@
+.jumbotron{
+	text-align: center;
+	width: 100%;
+}
+.selecionado{
+	background-color: yellow!important;
+}
+footer{
+	padding: 20px;
+	text-align: center;
+}
+.titulo-home{
+	text-align: center;
+	text-transform: uppercase;
+}
