@@ -1,4 +1,4 @@
-var app = angular.module("angularJS", ['ngRoute', 'ui.mask']);
+var app = angular.module("angularJS", ['ngRoute', 'ui.mask','duScroll']);
 
 app.config(function($routeProvider, $locationProvider){
 	$routeProvider.when('/',{
@@ -9,6 +9,6 @@ app.config(function($routeProvider, $locationProvider){
 		controller: "listaTelefonicaController",
 		templateUrl: 'views/lista.php'
 	})
-	// .otherwise({redirectTo:'/'})  
+	.otherwise({redirectTo:'/'})  
 	$locationProvider.html5Mode(true);
 });

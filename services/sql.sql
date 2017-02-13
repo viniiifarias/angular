@@ -1,0 +1,1 @@
+INSERT INTO operadoras (id,nome,codigo) VALUES ('2','Tim','021');

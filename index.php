@@ -15,6 +15,7 @@
 	<script src="js/dist/mask.js"></script>
 	<script src="js/dist/angular-locale_pt-br.js"></script>
 	<script src="js/dist/angular-route.js"></script>
+	<script src="js/dist/angular-scroll.js"></script>
 	<!-- CONTROLLERS -->
 	<script src="controllers/inicioController.js"></script>
 	<script src="controllers/listaTelefonicaController.js"></script>
