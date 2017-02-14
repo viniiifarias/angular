@@ -1,9 +1,7 @@
 .jumbotron{
 	text-align: center;
 	width: 100%;
-}
-.selecionado{
-	background-color: yellow!important;
+	background-color: #fff;
 }
 footer{
 	padding: 20px;
@@ -11,7 +9,6 @@ footer{
 }
 .titulo-home{
 	text-align: center;
-	text-transform: uppercase;
 }
 table{
 	margin-top: 10px;
@@ -32,4 +29,7 @@ form div{
 }
 form button{
 	margin-top: 10px;
+}
+nav a{
+	color: #fff!important;
 }

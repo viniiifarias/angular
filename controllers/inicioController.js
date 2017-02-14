@@ -1,3 +1,3 @@
 angular.module("angularJS").controller("inicioController",function($scope){
-	$scope.app = "Angularjs";
+	$scope.app = "AngularJS";
 });
