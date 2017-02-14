@@ -1,7 +1,11 @@
 <div class="jumbotron">
 	<div class="container">
 		<h3>{{app}}</h3>
+
+		<!-- CAMPO DE BUSCA -->
 		<input type="text" ng-model="criterioDeBusca" ng-model-options="{updateOn: 'default blur', debounce:{default: 500, blur: 0}}" class="form-control" placeholder="O que está buscando?">
+
+		<!-- TABELA DE CONTATOS -->
 		<table class="table table-striped">
 			<tr>
 				<td></td>
@@ -21,6 +25,8 @@
 
 			</tr>
 		</table>
+
+		<!-- FORMULÁRIO DE CRIAÇÃO DE NOVO CONTATO OU DE EDIÇÃO -->
 		<h3>Entre com um usuário</h3>
 		<form action="" name="contatoForm" id="form_edit">
 			<div ng-class="{'has-error': contatoForm.nome.$error.required && contatoForm.nome.$dirty, 'has-success': !contatoForm.nome.$error.required}">
