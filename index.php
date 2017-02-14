@@ -18,6 +18,7 @@
 	<script src="app.js"></script>
 	
 	<!-- COMPLEMENTOS ANGULAR -->
+	<script src="js/scripts.js"></script>
 	<script src="js/dist/mask.js"></script>
 	<script src="js/dist/angular-locale_pt-br.js"></script>
 	<script src="js/dist/angular-route.js"></script>
@@ -40,10 +41,17 @@
 		    	<a class="nav-link active" href="/">AngularJS</a>
 		  	</li>
 		  	<li class="nav-item">
-		    	<a class="nav-link" href="/lista">Lista Telefônica</a>
+		    	<a class="nav-link" href="/lista">Lista Telefonica</a>
 		  	</li>
 		</ul>
 	</nav>
+
+	<div class="move-mouse">
+		<div class="content">
+			<h3>Clique no botão para continuar a navegar</h3>
+			<a class="btn btn-primary btn-block" href="javascript:;" onclick="$('.move-mouse').removeClass('ativo');">Voltar a navegar</a>
+		</div>
+	</div>
 
 	<div ng-view></div>
 </body>

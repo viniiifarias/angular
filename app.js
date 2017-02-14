@@ -1,3 +1,8 @@
+var timeout;
+document.onmousemove = function(){
+  clearTimeout(timeout);
+  timeout = setTimeout(function(){$('.move-mouse').addClass('ativo');}, 60000);
+}
 var app = angular.module("angularJS", ['ngRoute', 'ui.mask','duScroll']);
 
 app.config(function($routeProvider, $locationProvider){
