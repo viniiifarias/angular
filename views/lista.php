@@ -3,7 +3,7 @@
 		<h3>{{app}}</h3>
 
 		<!-- CAMPO DE BUSCA -->
-		<input type="text" ng-model="criterioDeBusca" ng-model-options="{updateOn: 'default blur', debounce:{default: 500, blur: 0}}" class="form-control" placeholder="O que está buscando?">
+		<input type="text" ng-model="criterioDeBusca" ng-model-options="{updateOn: 'default blur', debounce:{default: 200, blur: 0}}" class="form-control" placeholder="O que está buscando?">
 
 		<!-- TABELA DE CONTATOS -->
 		<table class="table table-striped">
