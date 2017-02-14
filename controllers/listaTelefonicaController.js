@@ -14,7 +14,8 @@ angular.module("angularJS").controller("listaTelefonicaController",function($sco
 	// Função para carregar os contatos.
 	var carregarContatos = function(){
 	    contatosAPI.listContatos().then(function(data) {
-	      $scope.contatos = data.data;
+	      	$scope.contatos = data.data;
+			$scope.contatoForm.$setPristine();
 	    });
 	};
 
@@ -57,6 +58,7 @@ angular.module("angularJS").controller("listaTelefonicaController",function($sco
 	// Função para pegar o contato para a edição.
 	// Seta também a variável "editar" para que o botão de salvar alteração possa ser chamado.
 	$scope.editarContato=function(contato){
+		$scope.contatoForm.$setPristine();
 	    $scope.contato = contato;
 	    $scope.editar = true;
 	};
@@ -64,6 +66,7 @@ angular.module("angularJS").controller("listaTelefonicaController",function($sco
 	$scope.cancelarEdicao=function(contato){
 	    delete $scope.contato;
 	    $scope.editar = false;
+		$scope.contatoForm.$setPristine();
  	};
 
  	// Função de ordenação da tabela.

@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="./css/bootstrap.css">
 	<link rel="stylesheet" href="./css/estilos.css">
 
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<script src="js/angular.js"></script>
 	<!-- APP JS -->
 	<script src="app.js"></script>
