@@ -1,16 +1,17 @@
 <div class="jumbotron">
 	<div class="container">
 		<h3>{{app}}</h3>
+		<input type="text" ng-model="criterioDeBusca" class="form-control" placeholder="O que está buscando?">
 		<table class="table table-striped">
 			<tr>
 				<td></td>
 				<td></td>
-				<td><h3>Nome</h3></td>
-				<td><h3>Telefone</h3></td>
-				<td><h3>Anivesário</h3></td>
-				<td><h3>Operadora</h3></td>
+				<td><a href="" ng-click="ordenarPor('nome')"><h3>Nome</h3></a></td>
+				<td><a href="" ng-click="ordenarPor('telefone')"><h3>Telefone</h3></a></td>
+				<td><a href="" ng-click="ordenarPor('data')"><h3>Anivesário</h3></a></td>
+				<td><a href="" ng-click="ordenarPor('operadora')"><h3>Operadora</h3></a></td>
 			</tr>
-			<tr ng-class="{selecionado: contato.selecionado} " ng-repeat="contato in contatos">
+			<tr ng-class="{selecionado: contato.selecionado} " ng-repeat="contato in contatos | filter:criterioDeBusca | orderBy:criterioDeOrdenacao:direcaoDaOrdenacao">
 				<td><input ng-click="deletarContato(contato)" class="form-control btn btn-warning" type="button" ng-model="contato.selecionado" value="Deletar Contato"></td>
 				<td><a du-smooth-scroll href="#form_edit" ng-click="editarContato(contato)" class="form-control btn btn-warning" type="button">Editar Contato</a></td>
 				<td><p>{{::contato.nome}}</p></td>

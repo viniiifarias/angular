@@ -4,6 +4,7 @@ angular.module("angularJS").controller("listaTelefonicaController",function($sco
 	$scope.operadoras=["Vivo","Tim","Claro","Oi"];
 	$scope.data = [];
 	$scope.editar = false;
+ 	$scope.direcaoDaOrdenacao = true;
 	var carregarContatos = function(){
 	    contatosAPI.listContatos().then(function(data) {
 	      $scope.contatos = data.data;
@@ -17,14 +18,27 @@ angular.module("angularJS").controller("listaTelefonicaController",function($sco
 	    });
 	};
 	$scope.deletarContato=function(contato){
-	    contatosAPI.deleteContatos(contato).then(function() {
-	    	carregarContatos();
-	    });
+		var deletar = confirm("Você realmente quer deletar este contato?");
+
+		if (deletar == true){
+		    contatosAPI.deleteContatos(contato).then(function() {
+		    	carregarContatos();
+		    });
+			alert("Contato excluído com sucesso!");			
+		}
 	};
 	$scope.atualizarContato=function(contato){
-	    contatosAPI.updateContatos(contato).then(function() {
-			carregarContatos();
-	    });
+		var editar = confirm("Você deseja salvar esta alteração?");
+
+		if (editar == true){
+		    contatosAPI.updateContatos(contato).then(function() {
+				carregarContatos();
+		    });
+			alert("Você alterou este contato!");			
+		}
+		else{
+			cancelarEdicao();
+		}
 	};
 	$scope.editarContato=function(contato){
 	    $scope.contato = contato;
