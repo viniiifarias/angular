@@ -1,4 +1,4 @@
-# angular
+# Projeto Angular - CRUD Básico de treinamento
 Projeto angular (Inicial)
 
 CRUD funcionando - 14/02;
